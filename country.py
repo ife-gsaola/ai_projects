@@ -85,7 +85,7 @@ plt.plot(range(1,10), SSE)
 plt.xlabel('Number of clusters')
 plt.ylabel('SSE')
 
-kmeans_ = KMeans(4)
+kmeans_ = KMeans(5)
 kmeans_.fit(x_scaled)
 
 cluster_ = data2.copy()
