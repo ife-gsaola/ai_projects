@@ -24,7 +24,7 @@ drive.mount('/content/drive')
 
 # Installing a package which is needed to download the dataset from its online source. This package is recommended by the online source at the following
 # URL : https://archive.ics.uci.edu/dataset/2/adult
-!pip3 install ucimlrepo
+# !pip3 install ucimlrepo
 
 # Downloading the dataset from the online source. The first two lines are given by the online source mentioned above
 from ucimlrepo import fetch_ucirepo
@@ -126,7 +126,6 @@ new_data=pd.concat([a,b],axis=1)
 
 data
 
-"""* Q10: Write a function that receives the dataset and replace Famle with F and Male with M (please try to write it yourself before checking the answer in the next cell)"""
 
 # Answer
 def encode_sex(data):
@@ -154,7 +153,7 @@ drive.mount('/content/drive')
 import pandas as pd
 import numpy as np
 
-############# WRITE THE CODE IN THIS CELL ####################
+
 original_dataset = pd.read_csv("/content/drive/MyDrive/Colab Notebooks/DATA MINING/adult.csv")
 
 # Generate a new dataset with 10,000 random samples
@@ -178,13 +177,7 @@ print(task_dataset.shape)
 
 task_dataset.head()
 
-"""############ WRITE EXPLANATIONS HERE (IF APPLICABLE) #############
 
-
-
-"""
-
-############# WRITE THE CODE IN THIS CELL ####################
 # Group by 'sex' and calculate the average capital-gain for each sex
 average_capital_gain_by_sex = task_dataset.groupby('sex')['capital-gain'].sum()
 print(f"Contribution of Sex to average capital gain is: \n {average_capital_gain_by_sex}")
@@ -193,13 +186,6 @@ print(f"Contribution of Sex to average capital gain is: \n {average_capital_gain
 total_capital_gain_by_occupation = task_dataset.groupby('occupation')['capital-gain'].sum()
 print(f"Contribution of Occupation to average capital gain is: \n {total_capital_gain_by_occupation}")
 
-"""############ WRITE EXPLANATIONS HERE (IF APPLICABLE) #############
-
-
-
-"""
-
-############# WRITE THE CODE IN THIS CELL ####################
 
 # Group by 'education' and 'native-country', then count the occurrences
 education_counts_by_country = task_dataset[task_dataset['education'] == 'Bachelors'].groupby('native-country').size()
@@ -209,7 +195,6 @@ sorted_countries = education_counts_by_country.sort_values(ascending=False)
 country_with_highest_bachelors = education_counts_by_country.idxmax()
 print(f"The country with the highest bachelor's degree is: {country_with_highest_bachelors}")
 
-############# WRITE THE CODE IN THIS CELL ####################
 
 def print_greetings(names, ages):
     for name, age in zip(names, ages):
@@ -220,13 +205,7 @@ names = ['Amin', 'Michael', 'Timi', 'Ifeoluwa', 'Seun']
 ages = [27, 38, 20, 23, 34]
 print_greetings(names, ages)
 
-"""############ WRITE EXPLANATIONS HERE (IF APPLICABLE) #############
 
-
-
-"""
-
-############# WRITE THE CODE IN THIS CELL ####################
 def capitalize_words(optional_text):
     words = optional_text.upper()
     print("Capitalized words: %s" % words)
@@ -234,17 +213,13 @@ def capitalize_words(optional_text):
 
 capitalize_words('Write a code to receive an optional text, capitalise all words in the text and print them')
 
-"""############ WRITE EXPLANATIONS HERE (IF APPLICABLE) #############
 
-
-
-"""
 
 import pandas as pd
 
 def split_and_swap(dataset):
     num_columns = len(dataset.columns)
-    half_columns = num_columns // 2w
+    half_columns = num_columns // 2
 
     for column in range(half_columns):
         dataset.iloc[:, column], dataset.iloc[:, column + half_columns] = dataset.iloc[:, column + half_columns].copy(), dataset.iloc[:, column].copy()
@@ -253,7 +228,7 @@ split_and_swap(task_dataset)
 
 task_dataset
 
-############# WRITE THE CODE IN THIS CELL####################
+
 
 def compare_columns(dataset, column1, column2):
     dataset['comparison_result'] = dataset[column1] > dataset[column2]
@@ -263,8 +238,6 @@ def compare_columns(dataset, column1, column2):
 compare_columns(task_dataset, 'age', 'hours-per-week')
 
 print(task_dataset)
-
-"""############ WRITE EXPLANATIONS HERE (IF APPLICABLE) #############
 
 
 
@@ -289,3 +262,5 @@ def max_min_avg_age_countries(dataset):
 max_country, min_country = max_min_avg_age_countries(task_dataset)
 print("Country with maximum average age:", max_country)
 print("Country with minimum average age:", min_country)
+
+"""

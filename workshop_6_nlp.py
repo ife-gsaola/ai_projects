@@ -8,7 +8,6 @@ Original file is located at
 """
 
 # Commented out IPython magic to ensure Python compatibility.
-############# WRITE THE CODE IN THIS CELL ####################
 
 # Importing necessary libraries
 import pandas as pd
@@ -276,8 +275,7 @@ print('NB metrics\n')
 confusion_metrics(cm6)
 print('\n\n')
 
-"""############ WRITE YOUR REPORT IN THIS CELL (IF APPLICABLE) #############
-
+"""
 The provided code conducts sentiment analysis on a dataset of tweets using six different classifiers: Support Vector Machine (SVM), Random Forest, K-Nearest Neighbors (KNN), Decision Tree, Logistic Regression, and Naive Bayes. Here's a breakdown of what the code accomplishes:
 
 ##Data Loading and Preprocessing:

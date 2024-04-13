@@ -7,7 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/1ra3eyyRfxng5AdUUhtoYgI_uIYwoCySk
 """
 
-############# WRITE YOUR CODE IN THIS CELL (IF APPLICABLE)####################
 # Importing necessary libraries
 import pandas as pd
 import numpy as np
@@ -83,7 +82,7 @@ predicted = kmeans.fit_predict(X_scaled)
 
 predicted
 
-"""############# WRITE YOUR REPORT IN THIS CELL (IF APPLICABLE)####################
+"""
 
 
 # The code initially loads the 'adult_WS4' dataset, preprocesses it by handling missing values, selects three optional columns, and encodes the categorical target variable. It then applies StandardScaler to normalize the dataset before conducting K-Means clustering and Hierarchical clustering. The optimal number of clusters for each method is determined using the Elbow Method and Dendrogram, respectively. Finally, K-Means clustering is performed with the identified optimal number of clusters, and the predicted cluster labels are obtained.
@@ -94,7 +93,6 @@ predicted
 
 """
 
-############# WRITE YOUR CODE IN THIS CELL (IF APPLICABLE)####################
 
 # Importing necessary libraries
 import pandas as pd
@@ -122,7 +120,7 @@ plt.ylabel('Principal Component 2')
 plt.colorbar(label='Income Class')
 plt.show()
 
-"""############# WRITE YOUR REPORT IN THIS CELL (IF APPLICABLE)####################
+"""
 
 
 #The code implements Principal Component Analysis (PCA) to extract the first two principal components from the normalized dataset. It then plots a scatter plot of these principal components, coloring the points based on the income classes. This visualization provides insights into the distribution and separation of the data points in the reduced-dimensional space. Overall, the code effectively applies clustering and dimensionality reduction techniques for exploratory analysis of the dataset.

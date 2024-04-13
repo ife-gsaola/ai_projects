@@ -16,7 +16,6 @@ import numpy as np
 import pandas as pd
 from mlxtend.frequent_patterns import apriori, association_rules
 
-############### Write your code in this cell (If applicable) ##################
 
 portugal_data = pd.read_csv('/content/drive/MyDrive/Colab Notebooks/DATA MINING/Portugal_online_retail.csv')
 sweden_data = pd.read_csv('/content/drive/MyDrive/Colab Notebooks/DATA MINING/Sweden_online_retail.csv')
@@ -41,9 +40,7 @@ port_rules = association_rules(port_frquent_items, metric ="confidence", min_thr
 port_rules = port_rules.sort_values(by=['support'],ascending=False)
 port_rules.head(3)
 
-"""######################## Write your report in this cell (if applicable) #############################
-
-Note: Double click to write
+"""
 
 ## SWEDEN DATASET
 """
@@ -63,9 +60,7 @@ swed_rules = association_rules(swed_frquent_items, metric ="support", min_thresh
 swed_rules = swed_rules.sort_values(by=['support'],ascending=False)
 swed_rules.head(3)
 
-"""######################## Write your report in this cell (if applicable) #############################
-
-Note: Double click to write
+"""
 
 ## UK DATASET
 """
@@ -85,8 +80,7 @@ uk_rules = association_rules(uk_frquent_items, metric ="confidence", min_thresho
 uk_rules = uk_rules.sort_values(by=['support'],ascending=False)
 uk_rules.head(3)
 
-"""######################## Write your report in this cell (if applicable) #############################
-
+"""
 ##Portugal Dataset:
 
 Customers who purchase the BAKING SET 9 PIECE RETROSPOT are highly likely (confidence of 75%) to also buy the RETROSPOT TEA SET CERAMIC 11 PC. This suggests a strong association between baking and tea sets, indicating potential cross-selling opportunities or bundled promotions.

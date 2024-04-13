@@ -16,7 +16,6 @@ import numpy as np
 
 data = pd.read_csv("/content/drive/MyDrive/Colab Notebooks/DATA MINING/adult (2).csv")
 
-############# WRITE YOUR CODE IN THIS CELL (IF APPLICABLE)####################
 
 # Assuming `data` is your DataFrame
 null_values_per_column = data.isna().sum()
@@ -32,7 +31,7 @@ pd.set_option('display.max_rows', None)
 # Print the first 100 rows of the DataFrame
 data.head(100)
 
-"""############# WRITE YOUR REPORT IN THIS CELL (IF APPLICABLE)####################
+"""
 
 #data.head(100): This line prints the first 100 rows of the DataFrame data after the display settings have been adjusted. The head(100) method returns the first 100 rows of the DataFrame, and print() displays it in the output.
 
@@ -52,7 +51,6 @@ data.head(100)
 6. Machine Learning Models: Train machine learning models to detect anomalies or outliers in the data. Use unsupervised learning techniques like clustering or anomaly detection algorithms to identify columns with unusual or unexpected values.
 """
 
-############# WRITE YOUR CODE IN THIS CELL (IF APPLICABLE)####################
 
 # Get the data types of columns containing null values
 columns_with_null = data.columns[data.isna().any()]
@@ -84,13 +82,7 @@ for column in categorical_columns_with_null:
 print("Number of Null values of all columns after filling null values with mode:")
 print(data.isna().sum())
 
-"""############# WRITE YOUR REPORT IN THIS CELL (IF APPLICABLE)####################
 
-
-
-"""
-
-############# WRITE YOUR CODE IN THIS CELL (IF APPLICABLE)####################
 
 # Assuming 'age' is the column with wrong data
 # Calculate the median age
@@ -107,7 +99,6 @@ print("Number of wrong values filled:", wrong_age_condition.sum())
 
 data.head()
 
-############# WRITE YOUR CODE IN THIS CELL (IF APPLICABLE)####################
 # Using LabelEncoder for binary classification
 from sklearn.preprocessing import LabelEncoder
 
